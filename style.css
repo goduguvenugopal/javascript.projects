@@ -1,0 +1,74 @@
+#textlabel{
+  border-radius: 20px;
+  background-color: white;
+  width: 339px;
+  height: 49px;
+  padding-left: 10px;
+  font-size: 17px;
+  font-family: ;
+  padding-bottom: 0px;
+  padding-right: 0px;
+}
+
+#text{
+  border: none;
+  outline: none;
+  width: 260px;
+  height: 48px;
+
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.addbtn{
+  background-image: linear-gradient(
+    to left,
+    rgb(214, 133, 112),
+    rgb(227, 109, 41),
+    rgb(225, 23, 23)
+  );
+  background-color: rgb(233, 81, 233);
+  padding-left: 14px;
+  padding-top: 13px;
+  padding-bottom: 14px;
+  padding-right: 24px;
+  cursor: pointer;
+  user-select: none;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: white;
+}
+
+
+
+.list-tag{
+    
+   background-color: #fff;
+   padding: 10px;
+   margin-top: 15px;
+   border-radius: 20px;
+   box-shadow: 0px 0px 4px rgb(107, 107, 107);
+   display: flex;
+   justify-content: space-between;
+   overflow-x: auto;
+   padding-bottom: 0px;
+   
+}
+
+
+.delbtn{
+   border: none;
+   background-color: rgb(255, 0, 183);
+   color: white;
+   padding: 5px;
+   border-radius: 20px;
+   width: 80px;
+    margin-bottom: 8px;
+   
+
+}
+
+
+.delbtn:hover{
+   background-color: blue;
+}
