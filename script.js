@@ -56,3 +56,15 @@ selectColor.addEventListener("change", function () {
   const getColor = selectColor.value;
   bodyFunc.style.backgroundColor = getColor;
 });
+
+
+
+// image preview code starts here 
+
+const fileFunc = document.getElementById('file');
+const previewFunc = document.getElementById('imgid');
+
+fileFunc.onchange = function(event){
+  const imgUrl = URL.createObjectURL(event.target.files[0]);
+  previewFunc.src = imgUrl;
+}

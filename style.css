@@ -172,3 +172,35 @@
   border-radius: 20px;
   padding: 5px;
 }
+
+
+/* preview image code styling starts here  */
+
+
+#cameraid{
+  background-color: white;
+  padding: 5px;
+  font-size: 38px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 7px white;
+  user-select: none;
+  
+}
+
+
+#cameraid:hover{
+  background-color: blue;
+  color: white;
+}
+
+#file{
+  display: none;
+}
+
+#imgid{
+  border-radius: 20px;
+  background-color: white;
+  padding: 5px;
+  width: 300px;
+  /* height: 350px; */
+}
