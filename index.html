@@ -100,7 +100,40 @@
     <input type="file" name="file" id="file" class="mt-4" accept="image/*" ><br>
    
    <img src="images/pexels-photo-12495614.jpeg" class="mt-4" id="imgid" alt="image">
-  </div>
+  </div> <hr class="text-white" />
+
+   <!-- user input data preview code  -->
+   <div class="py-5 ml-5 text-start container">
+    <h3 class="mb-4 text-white">Registration Form</h3>
+    <form class="" id="form">
+      
+      <label for="ftext" class="labelstyle">Full Name :</label>
+      <input type="text" id="ftext" placeholder="Enter full Name" class="regform" required maxlength="16"><br>
+      <label for="ctext" class="labelstyle">City Name :</label>
+      <input type="text" id="ctext" required placeholder="Enter City Name" class="regform" ><br>
+      <label for="ntext" class="labelstyle">Country Name :</label>
+      <input type="text" id="ntext" placeholder="Enter Country Name" class="regform3" required><br>
+      <label for="num" class="labelstyle">Mobile Number :</label>
+      <input type="number" id="num" placeholder="Enter Number" class="regform4" required><br>
+      <label for="date" class="labelstyle">Date of Birth :</label>
+      <input type="date" id="date"  class="regform5" required><br>
+       
+      <input type="submit" value="Submit" class="regform5 mt-5"><br>
+     </form>
+
+  <h3 class="text-white my-4">User Input Data</h3>
+
+    <div class="bg-whit container user-cont py-3 my-4">
+      
+      <h5 class="usertext my-2" id="fullnamedis"></h5>
+      <h5 class="usertext my-2" id="citydis"></h5>
+      <h5 class="usertext my-2" id="coundis"></h5>  
+      <h5 class="usertext my-2" id="numdis"></h5>
+      <h5 class="usertext my-2" id="datedis"></h5>
+    </div>
+  
+    </div>
+
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

@@ -68,3 +68,52 @@ fileFunc.onchange = function(event){
   const imgUrl = URL.createObjectURL(event.target.files[0]);
   previewFunc.src = imgUrl;
 }
+
+
+
+
+// user form get data code 
+
+
+const formFunc = document.getElementById('form');
+const fInput = document.getElementById('ftext');
+const disName = document.getElementById('fullnamedis');
+
+const cityFunc = document.getElementById('ctext');
+const disCity = document.getElementById('citydis');
+
+const couText = document.getElementById('ntext');
+const disCountry = document.getElementById('coundis');
+
+const numFunc = document.getElementById('num');
+const disNum = document.getElementById('numdis');
+
+const dateFunc = document.getElementById('date');
+const disDate = document.getElementById('datedis');
+
+formFunc.addEventListener('submit',function(x){
+  x.preventDefault();
+  const fullStore1 = fInput.value;
+  disName.innerHTML = `Full Name : ${fullStore1}`;
+   
+
+  const fullStore2 = cityFunc.value;
+  disCity.innerHTML = `City Name : ${fullStore2}`;
+  
+
+  const fullStore3 = couText.value;
+  disCountry.innerHTML = `Country Name : ${fullStore3}`;
+  
+
+
+  const fullStore4 = numFunc.value;
+  disNum.innerHTML = `Mobile Number : ${fullStore4}`;
+  
+
+
+  const fullStore5 = dateFunc.value;
+  disDate.innerHTML = `Date of Birth : ${fullStore5}`;
+   
+
+  formFunc.reset()
+})
