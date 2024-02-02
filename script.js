@@ -1,3 +1,4 @@
+// to do list code starts here 
 document.addEventListener("DOMContentLoaded", function () {
   const textfunc = document.getElementById("text");
   const addbtnfunc = document.getElementById("addtask");
@@ -22,3 +23,12 @@ function delfunc(button) {
   const newList = button.parentElement;
   newList.remove();
 }
+
+
+  // reverse name code starts here 
+ 
+  function addTask(){
+    const textFunc1 = document.getElementById('text1').value;
+    const reverse = textFunc1.split('').reverse('').join('');
+    document.getElementById('displaytask1').innerHTML = reverse;
+ }

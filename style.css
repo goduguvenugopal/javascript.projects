@@ -20,6 +20,7 @@
   border-bottom-left-radius: 20px;
 }
 
+/* to do list styling  */
 .addbtn{
   background-image: linear-gradient(
     to left,
@@ -78,3 +79,52 @@
   background-color: rgb(142, 219, 236);
   height: 100vh;
 }
+
+
+
+
+/* reverse name styling  */
+
+#textlabel1{
+  border-radius: 20px;
+  background-color: white;
+  width: 366px;
+  height: 49px;
+  padding-left: 10px;
+  font-size: 17px;
+  font-family: ;
+  padding-bottom: 0px;
+  padding-right: 0px;
+}
+
+#text1{
+  border: none;
+  outline: none;
+  width: 260px;
+  height: 48px;
+
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.addbtn1{
+  background-image: linear-gradient(
+    to left,
+    rgb(214, 133, 112),
+    rgb(227, 109, 41),
+    rgb(225, 23, 23)
+  );
+  background-color: rgb(233, 81, 233);
+  padding-left: 14px;
+  padding-top: 13px;
+  padding-bottom: 14px;
+  padding-right: 24px;
+  cursor: pointer;
+  user-select: none;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: white;
+}
+
+
+ 
