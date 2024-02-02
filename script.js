@@ -1,4 +1,4 @@
-// to do list code starts here 
+// to do list code starts here
 document.addEventListener("DOMContentLoaded", function () {
   const textfunc = document.getElementById("text");
   const addbtnfunc = document.getElementById("addtask");
@@ -24,11 +24,29 @@ function delfunc(button) {
   newList.remove();
 }
 
+// reverse name code starts here
 
-  // reverse name code starts here 
+function addTask() {
+   
+  const textFunc1 = document.getElementById("text1").value;
+  const reverse = textFunc1.split("").reverse("").join("");
+  document.getElementById("displaytask1").innerHTML = reverse;
+  document.getElementById("text1").value = "";
+}
+
  
-  function addTask(){
-    const textFunc1 = document.getElementById('text1').value;
-    const reverse = textFunc1.split('').reverse('').join('');
-    document.getElementById('displaytask1').innerHTML = reverse;
- }
+
+//name printing function code
+
+let intervalId;
+function startPrinting() {
+ 
+  const priText = document.getElementById('text2').value;
+  intervalId = setInterval(function(index) {
+    document.getElementById('printtxt').innerHTML +=`Hello, ${priText} `;
+  }, 1000);
+}
+
+function stopPrinting() {
+  clearInterval(intervalId);
+}

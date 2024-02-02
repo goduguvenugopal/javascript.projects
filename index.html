@@ -14,40 +14,58 @@
     />
   </head>
   <body class="bg-success text-center">
-<!-- to do list code starts here  -->
-    <div class="text-center bg-success container py-5"> 
-    <h3 class="To-head mb-4 text-white">To - Do List</h3>
-    <form class="" id="formid">
-      <label for="text" id="textlabel" class="">
-        <input
-          type="text"
-          id="text"
-          name="search"
-          placeholder="Add Your Task Here"
-        /><span class="addbtn" id="addtask">Add</span></label
-      >
-    </form>
- <h3 class="text-white pt-5">Your Tasks </h3>
- 
-    <ul class="pt-3" id="displaytask"></ul>
-  </div>
-  <hr class="text-white">
+    <!-- to do list code starts here  -->
+    <div class="text-center bg-success container py-5">
+      <h3 class="To-head mb-4 text-white">To - Do List</h3>
+      <form class="" id="formid">
+        <label for="text" id="textlabel" class="">
+          <input
+            type="text"
+            id="text"
+            name="search"
+            placeholder="Add Your Task Here"
+          /><span class="addbtn" id="addtask">Add</span></label
+        >
+      </form>
+      <h3 class="text-white pt-5">Your Tasks</h3>
 
-       <!-- reverse code starts here  -->
+      <ul class="pt-3" id="displaytask"></ul>
+    </div>
+    <hr class="text-white" />
 
-    <div class="pt-4 container">
+    <!-- reverse code starts here  -->
+
+    <div class="pt-4 container pb-4">
       <h3 class="To-head mb-4 text-white">Reverse Names</h3>
-      
-       
-          <input type="text" id="text1" name="search" placeholder="Enter Names Here" class="textlabel1 mb-2">  
-        
-        <button class="addbtn1 px-3 " onclick="addTask()">Reverse</button>
+
+      <input
+        type="text"
+        id="text1"
+        name="search"
+        placeholder="Enter Names Here"
+        class="textlabel1 mb-2"
+      />
+
+      <button class="addbtn1 px-3" onclick="addTask()">Reverse</button>
 
       <h4 class="mt-5 text-white" id="displaytask1"></h4>
-    </div>
+    </div><hr class="text-white">
+
+ <!-- setinterval code  -->
+   <div class="py-5 container">
+    <h3 class="text-white mb-4">Name printing</h3>
+    <input type="text" name="text" id="text2" placeholder="Enter your name" class="mb-2"><br>
+    <button class="printbtn" onclick="startPrinting()">Print</button>
+    <button class="printbtn" onclick="stopPrinting()">Stop</button>
+   
+    <h4 class="textprint pt-3" id="printtxt"></h4>
+  </div>
 
 
-     
+
+
+
+
 
 
     <script

@@ -127,5 +127,54 @@
   
 }
 
+/* name printing styling  */
 
+#text2{
+  border-radius: 20px;
+  background-color: white;
+  /* width: 326px; */
+  height: 35px;
+  padding-left: 10px;
+  font-size: 17px;
+  font-family: ;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  border: none;
+  outline: none;
+  
+  margin-right: 5px;
+   
+}
+.printbtn{
+  background-image: linear-gradient(
+    to left,
+    rgb(214, 133, 112),
+    rgb(227, 109, 41),
+    rgb(225, 23, 23)
+  );
+  
+  height: 35px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 20px;
+  color: white;
+  border: none;
+   width: 80px;
+}
+
+.textprint{
  
+ color: white;
+  font-size: 15px;
+  font-family: roboto;
+}
+
+.printbtn:hover{
+  background-image: linear-gradient(
+    to left,
+    rgb(201, 182, 39),
+    rgb(29, 230, 227),
+    rgb(206, 48, 196)
+  );
+  color: black;
+}
