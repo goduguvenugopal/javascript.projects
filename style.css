@@ -173,53 +173,43 @@
   padding: 5px;
 }
 
-
 /* preview image code styling starts here  */
 
-
-#cameraid{
+#cameraid {
   background-color: white;
   padding: 5px;
   font-size: 38px;
   border-radius: 50%;
   box-shadow: 0px 0px 7px white;
   user-select: none;
-  
 }
 
-
-#cameraid:hover{
+#cameraid:hover {
   background-color: blue;
   color: white;
 }
 
-#file{
+#file {
   display: none;
 }
 
-#imgid{
+#imgid {
   border-radius: 20px;
   background-color: white;
   padding: 5px;
   width: 300px;
-   
 }
-
 
 /* forms styling  */
 
- 
-
-
-.labelstyle{
+.labelstyle {
   font-size: 17px;
   color: white;
   margin-right: 10px;
   margin-top: 15px;
-
 }
 
-.regform{
+.regform {
   height: 33px;
   border-radius: 20px;
   user-select: none;
@@ -231,7 +221,7 @@
   width: 200px;
 }
 
-.regform3{
+.regform3 {
   height: 33px;
   border-radius: 20px;
   user-select: none;
@@ -240,12 +230,11 @@
   margin-left: 14px;
   margin-top: 15px;
   width: 200px;
-  
+
   padding-left: 15px;
-  
 }
 
-.regform4{
+.regform4 {
   height: 33px;
   border-radius: 20px;
   user-select: none;
@@ -255,11 +244,9 @@
   margin-top: 15px;
   margin-left: 8px;
   width: 200px;
-  
 }
 
-
-.regform5{
+.regform5 {
   height: 33px;
   border-radius: 20px;
   user-select: none;
@@ -269,16 +256,182 @@
   margin-top: 15px;
   margin-left: 30px;
   width: 200px;
-  
 }
 
-.user-cont{
+.user-cont {
   background-color: white;
   border-radius: 20px;
+  height: 200px;
+}
+
+.usertext {
+  text-decoration: underline;
+  padding-left: 10px;
+  color: rgb(68, 48, 246);
+}
+
+#submit {
+  background-color: rgb(9, 93, 94);
+  color: white;
+  border: solid 1px white;
+}
+
+#submit:hover {
+  background-image: linear-gradient(
+    to left,
+    rgb(201, 182, 39),
+    rgb(29, 230, 227),
+    rgb(206, 48, 196)
+  );
+  color: black;
+}
+
+/* uppercase text styling  */
+
+#uppertxt {
+  height: 33px;
+  border-radius: 20px;
+  user-select: none;
+  border: none;
+  outline: none;
+  padding-left: 15px;
+}
+
+#changebtn {
+  background-color: rgb(9, 93, 94);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  width: 70px;
+  border: solid 1px white;
+  font-weight: 500;
+
+  padding: 3px;
+}
+
+#changebtn:hover {
+  background-image: linear-gradient(
+    to left,
+    rgb(201, 182, 39),
+    rgb(29, 230, 227),
+    rgb(206, 48, 196)
+  );
+  color: black;
+  border: none;
+}
+
+/* Text Printing styling */
+.dis-cont {
+  border-radius: 20px;
+  margin: 10px;
+  overflow-wrap: break-word;
+
+   
+}
+
+
+#counttext{
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  padding-left: 15px;
+  height: 35px;
+  margin-bottom: 16px;
+}
+
+#countbtn{
+  background-color: rgb(9, 93, 94);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  width: 70px;
+  border: solid 1px white;
+  font-weight: 500;
+  margin-left: 5px;
+  padding: 3px;
+  height: 35px;
+}
+
+#countbtn:hover {
+  background-image: linear-gradient(
+    to left,
+    rgb(201, 182, 39),
+    rgb(29, 230, 227),
+    rgb(206, 48, 196)
+  );
+  color: black;
+  border: none;
+}
+
+.sethead{
+font-size: 19px;
+margin-right: 10px;
+color: white;
 
 }
 
-.usertext{
-  margin: 15px;
-  color: blue;
+#textcolor{
+  height: 35px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  border: solid 1px white;
+  font-weight: 500;
+  margin-left: 5px;
+  padding: 3px;
+  margin-right: 10px;
+}
+
+#selectcount{
+   height: 35px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  border: solid 1px white;
+  font-weight: 500;
+  margin-left: 5px;
+  padding: 3px;
+  margin-right: 10px;
+}
+
+#countbtn2{
+  height: 35px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  border: solid 1px white;
+  font-weight: 500;
+  margin-left: 5px;
+  padding: 3px;
+  width: 90px;
+}
+
+#countbtn2:hover {
+  background-image: linear-gradient(
+    to left,
+    rgb(230, 25, 10),
+    rgb(215, 101, 53),
+    rgb(206, 111, 48)
+  );
+  color: rgb(245, 240, 240);
+  border: none;
+}
+
+#copybtn{
+  background-color: rgb(232, 58, 232);
+  color: rgb(253, 250, 250);
+  border: none;
+  
+  border-radius: 20px;
+  width: 70px;
+   
+  font-weight: 500;
+  margin-left: 9px;
+  padding: 3px;
+}
+
+#copybtn:hover{
+  background-color: rgb(78, 196, 243);
+  color: white;
+  
 }

@@ -57,63 +57,110 @@ selectColor.addEventListener("change", function () {
   bodyFunc.style.backgroundColor = getColor;
 });
 
+// image preview code starts here
 
+const fileFunc = document.getElementById("file");
+const previewFunc = document.getElementById("imgid");
 
-// image preview code starts here 
-
-const fileFunc = document.getElementById('file');
-const previewFunc = document.getElementById('imgid');
-
-fileFunc.onchange = function(event){
+fileFunc.onchange = function (event) {
   const imgUrl = URL.createObjectURL(event.target.files[0]);
   previewFunc.src = imgUrl;
+};
+
+// user form get data code
+
+const formFunc = document.getElementById("form");
+const fInput = document.getElementById("ftext");
+const disName = document.getElementById("fullnamedis");
+
+const cityFunc = document.getElementById("ctext");
+const disCity = document.getElementById("citydis");
+
+const couText = document.getElementById("ntext");
+const disCountry = document.getElementById("coundis");
+
+const numFunc = document.getElementById("num");
+const disNum = document.getElementById("numdis");
+
+const dateFunc = document.getElementById("date");
+const disDate = document.getElementById("datedis");
+
+formFunc.addEventListener("submit", function (x) {
+  x.preventDefault();
+  const fullStore1 = fInput.value;
+  disName.innerHTML = `${fullStore1}`;
+
+  const fullStore2 = cityFunc.value;
+  disCity.innerHTML = `${fullStore2}`;
+
+  const fullStore3 = couText.value;
+  disCountry.innerHTML = `${fullStore3}`;
+
+  const fullStore4 = numFunc.value;
+  disNum.innerHTML = `${fullStore4}`;
+
+  const fullStore5 = dateFunc.value;
+  disDate.innerHTML = `${fullStore5}`;
+
+  formFunc.reset();
+});
+
+// changetext into upppercase
+
+function changeText() {
+  const upperFunc = document.getElementById("uppertxt").value;
+  const upperTxtS = upperFunc.toUpperCase();
+  document.getElementById(
+    "resulttxt"
+  ).innerHTML = `Here Is The Text In UpperCase : ${upperTxtS}`;
 }
 
 
 
 
-// user form get data code 
 
 
-const formFunc = document.getElementById('form');
-const fInput = document.getElementById('ftext');
-const disName = document.getElementById('fullnamedis');
 
-const cityFunc = document.getElementById('ctext');
-const disCity = document.getElementById('citydis');
+// text printing code starts here
+const textColor = document.getElementById("textcolor");
+const copyBtn = document.getElementById("copybtn");
+const countBtn = document.getElementById("countbtn");
+const selectFunc = document.getElementById("selectcount");
+const outputDiv = document.getElementById("dispcount");
+const textValue = document.getElementById("counttext");
+countBtn.addEventListener("click", function () {
+  const storeTxtData = textValue.value;
+  const countValue = selectFunc.value;
 
-const couText = document.getElementById('ntext');
-const disCountry = document.getElementById('coundis');
+  for (let i = 0; i < countValue; i++) {
+    outputDiv.innerHTML += ` ${storeTxtData}`;
+  }
+});
+// clear text function
+function cleartext() {
+  outputDiv.innerHTML = "";
+}
 
-const numFunc = document.getElementById('num');
-const disNum = document.getElementById('numdis');
+//copy text clipboard API function code
 
-const dateFunc = document.getElementById('date');
-const disDate = document.getElementById('datedis');
+copyBtn.addEventListener("click", async function () {
+  const outputContent = document.getElementById("dispcount").innerText;
 
-formFunc.addEventListener('submit',function(x){
-  x.preventDefault();
-  const fullStore1 = fInput.value;
-  disName.innerHTML = `Full Name : ${fullStore1}`;
-   
+  try {
+    await navigator.clipboard.writeText(outputContent);
+    alert("Content copied to clipboard!");
+  } catch (err) {
+    console.error("Unable to copy to clipboard", err);
+  }
+});
 
-  const fullStore2 = cityFunc.value;
-  disCity.innerHTML = `City Name : ${fullStore2}`;
-  
-
-  const fullStore3 = couText.value;
-  disCountry.innerHTML = `Country Name : ${fullStore3}`;
-  
-
-
-  const fullStore4 = numFunc.value;
-  disNum.innerHTML = `Mobile Number : ${fullStore4}`;
-  
+// textcolor code 
 
 
-  const fullStore5 = dateFunc.value;
-  disDate.innerHTML = `Date of Birth : ${fullStore5}`;
-   
+textColor.addEventListener('change',function(){
+  const textCol = textColor.value;
+  outputDiv.style.color = textCol;
 
-  formFunc.reset()
 })
+
+
