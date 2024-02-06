@@ -105,6 +105,7 @@
       <input
         type="file"
         name="file"
+        onchange="imagePre()"
         id="file"
         class="mt-4"
         accept="image/*"
@@ -210,11 +211,17 @@
     </div>
     <hr class="text-white" />
 
-  <!-- text printing code strts here -->
+    <!-- text printing code strts here -->
 
     <div class="py-5 container">
-      <h3 class="text-white mb-5">Text Print Multiple Times By Set Count </h3>
-      <input type="text" id="counttext" placeholder="Enter Text Here" class="mb-4"/>
+      <h3 class="text-white mb-5">Text Print Multiple Times</h3>
+      <input
+        type="text"
+        id="counttext"
+        name="text"
+        placeholder="Enter Text Here"
+        class="mb-4"
+      />
       <button id="countbtn">Print</button>
       <select id="textcolor">
         <option value="">Color</option>
@@ -230,29 +237,34 @@
         <option value="orange">Orange</option>
         <option value="violet">Violet</option>
       </select>
-      <div class="d-flex justify-content-center mt-4 py-3"> 
-      <h4 class="sethead mt-1">Set Text count</h4>
-      <select name="" id="selectcount">
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="10">10</option>
-        <option value="100">100</option>
-        <option value="500">500</option>
-        <option value="1000">1000</option>
-        <option value="5000">5000</option>
-        <option value="10000">10000</option>
-        <option value="50000">50000</option>
-        <option value="100000">100000</option>
-      </select>
-      <button id="countbtn2" onclick="cleartext()" >Clear Text</button>
-       
-      
-    </div>
+      <div class="d-flex justify-content-center mt-4 py-3">
+        <h4 class="sethead mt-1">Set Text count</h4>
+        <select name="" id="selectcount">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="10">10</option>
+          <option value="100">100</option>
+          <option value="500">500</option>
+          <option value="1000">1000</option>
+          <option value="5000">5000</option>
+          <option value="10000">10000</option>
+          <option value="50000">50000</option>
+          <option value="100000">100000</option>
+        </select>
+        <button id="countbtn2" onclick="cleartext()">Clear Text</button>
+      </div>
+      <h6 class="my-3 text-white ">
+        <strong class="text-danger">Note :</strong> If you Set The Text Count More Than
+        <b class="text-danger">10000</b> This Website May Crash.
+      </h6>
       <div class="dis-cont container py-3 my-4 bg-white">
         <button id="copybtn" class="mb-2">Copy</button>
         <h5 class="" id="dispcount"></h5>
       </div>
-    </div>
+    </div>  <hr class="text-white" />
+
+    <div class="container"></div>
+
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

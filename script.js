@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const newList = document.createElement("li");
       newList.className = "list-tag";
       newList.innerHTML = `<span>${txtFromT}</span>
-                                  <button class="delbtn" onclick="delfunc(this)">Delete</button>`;
+      <button class="delbtn" onclick="delfunc(this)">Delete</button>`;
 
       displayfunc.appendChild(newList);
       textfunc.value = "";
@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function delfunc(button) {
-  const newList = button.parentElement;
-  newList.remove();
+  const newLi = button.parentElement;
+  newLi.remove();
 }
 
 // reverse name code starts here
@@ -38,7 +38,7 @@ function addTask() {
 let intervalId;
 function startPrinting() {
   const priText = document.getElementById("text2").value;
-  intervalId = setInterval(function (index) {
+  intervalId = setInterval(function () {
     document.getElementById("printtxt").innerHTML += `Hello, ${priText} `;
   }, 1000);
 }
@@ -66,6 +66,25 @@ fileFunc.onchange = function (event) {
   const imgUrl = URL.createObjectURL(event.target.files[0]);
   previewFunc.src = imgUrl;
 };
+
+// image preview another example code
+
+// function imagePre() {
+//   const selectImg = fileFunc.files[0];
+
+//   if (selectImg && selectImg.type.startsWith("image/")) {
+//     confirm(`Profile photo has been changed`);
+
+//     const read = new FileReader();
+//     read.onload = function (x) {
+//       previewFunc.src = x.target.result;
+//     };
+//     read.readAsDataURL(selectImg);
+//     previewFunc.style.display = "block";
+//   } else {
+//     previewFunc.style.display = "none";
+//   }
+// }
 
 // user form get data code
 
@@ -115,12 +134,6 @@ function changeText() {
   ).innerHTML = `Here Is The Text In UpperCase : ${upperTxtS}`;
 }
 
-
-
-
-
-
-
 // text printing code starts here
 const textColor = document.getElementById("textcolor");
 const copyBtn = document.getElementById("copybtn");
@@ -143,24 +156,16 @@ function cleartext() {
 
 //copy text clipboard API function code
 
-copyBtn.addEventListener("click", async function () {
+copyBtn.addEventListener("click", function () {
   const outputContent = document.getElementById("dispcount").innerText;
 
-  try {
-    await navigator.clipboard.writeText(outputContent);
-    alert("Content copied to clipboard!");
-  } catch (err) {
-    console.error("Unable to copy to clipboard", err);
-  }
+  navigator.clipboard.writeText(outputContent);
+  alert("Content copied to clipboard!");
 });
 
-// textcolor code 
+// textcolor code
 
-
-textColor.addEventListener('change',function(){
+textColor.addEventListener("change", function () {
   const textCol = textColor.value;
   outputDiv.style.color = textCol;
-
-})
-
-
+});
