@@ -175,7 +175,7 @@ textColor.addEventListener("change", function () {
 
 function shareFunc(){
   navigator.share({
-    text: "check the website",
+    text: "Hii I am venu you can have lot of fun, check this website",
     url:"https://goduguvenugopal.github.io/javascript.projects/"
 
 
