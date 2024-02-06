@@ -169,3 +169,15 @@ textColor.addEventListener("change", function () {
   const textCol = textColor.value;
   outputDiv.style.color = textCol;
 });
+
+// share websit Code
+
+
+function shareFunc(){
+  navigator.share({
+    text: "check the website",
+    url:"https://goduguvenugopal.github.io/javascript.projects/"
+
+
+  })
+}
