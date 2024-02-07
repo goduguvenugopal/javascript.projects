@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   addbtnfunc.addEventListener("click", function () {
     const txtFromT = textfunc.value.trim();
-
     if (txtFromT !== "") {
       const newList = document.createElement("li");
       newList.className = "list-tag";
@@ -18,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-
+// delete function code
 function delfunc(button) {
   const newLi = button.parentElement;
   newLi.remove();
@@ -172,12 +171,47 @@ textColor.addEventListener("change", function () {
 
 // share websit Code
 
-
-function shareFunc(){
+function shareFunc() {
   navigator.share({
     text: "Hii I am venu you can have lot of fun, check this website : ",
-    url:"https://goduguvenugopal.github.io/javascript.projects/"
-
-
-  })
+    url: "https://goduguvenugopal.github.io/javascript.projects/",
+  });
 }
+
+
+
+// try catch and finaly 
+
+function myFunction() {
+  const message1 = document.getElementById("err");
+  const message = document.getElementById("p01");
+
+  let pass = document.getElementById("pass2").value;
+  let x = document.getElementById("demo").value;
+
+  try {
+    if (x.trim() === "") throw "Please enter Email";
+    if (!isValidEmail(x)) throw "Email is not valid";
+  } catch (err) {
+    message.innerHTML = err;
+  }
+
+  try {
+    if (pass.trim() === "") throw "Please enter password";
+    if (pass.length < 4) throw "Password is too small";
+    if (pass.length > 8) throw "Password should be between 4 and 8 characters";
+  } catch (err1) {
+    message1.innerHTML = err1;
+  } finally {
+    document.getElementById("pass2").value = "";
+    document.getElementById("demo").value = "";
+  }
+}
+
+function isValidEmail(email) {
+  return /\S+@\S+\.\S+/.test(email);
+}
+
+
+
+ 
