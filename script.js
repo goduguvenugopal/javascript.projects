@@ -178,9 +178,7 @@ function shareFunc() {
   });
 }
 
-
-
-// try catch and finaly 
+// try catch and finaly
 
 function myFunction() {
   const message1 = document.getElementById("err");
@@ -212,6 +210,19 @@ function isValidEmail(email) {
   return /\S+@\S+\.\S+/.test(email);
 }
 
+// password Toggle
+function toggleFunc() {
+  const togglePass = document.getElementById("togglepass");
+  const toggleClose = document.getElementById("lockclose");
+  const toggleOpen = document.getElementById("lockopen");
 
-
- 
+  if (togglePass.type === "password") {
+    togglePass.type = "text";
+    toggleClose.style.display = "none";
+    toggleOpen.style.display = "block";
+  } else {
+    togglePass.type = "password";
+    toggleClose.style.display = "block";
+    toggleOpen.style.display = "none";
+  }
+}

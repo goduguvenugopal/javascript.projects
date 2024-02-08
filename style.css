@@ -431,6 +431,77 @@
   color: white;
 }
 
+
+
+/* try catch form styling */
+ .catch{
+  height: 35px;
+  border-radius: 20px;
+  user-select: none;
+  border: none;
+  outline: none;
+   padding-left: 15px;
+  font-size: 17px;
+ }
+
+/* password styling */
+
+.main-card{
+ display: flex;
+ justify-content: center;
+ padding-top: ;
+}
+
+
+.toggle-card{
+  display: flex;
+  height: 35px;
+  background-color: white;
+  width: 250px;
+  justify-content: center;
+  border-radius: 20px;
+  align-items: center;
+  margin-left: 5px;
+}
+
+#togglepass{
+  height: 35px;
+  border-radius: 20px;
+  user-select: none;
+  border: none;
+  outline: none;
+   
+  font-size: 17px;
+  
+  
+}
+
+
+.lockicon1{
+   
+  right: 40px;
+  font-size: 15px;
+  top: 5px;
+   cursor: pointer;
+   user-select: none;
+}
+.lockicon2{
+   
+  right: 40px;
+  font-size: 15px;
+  top: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+#lockopen{
+  display: none;
+}
+
+ 
+
+
+/* share button styling  */
 #sharebt {
   background-color: rgb(172, 45, 145);
   color: rgb(241, 240, 245);
