@@ -519,4 +519,10 @@
 
 #time{
   cursor: pointer;
+  user-select: none;
 }
+
+#da-te{
+  cursor: pointer;
+}
+

@@ -269,10 +269,14 @@ const set = setInterval(setDate, 1000);
 function setDate() {
   let date = new Date();
   document.getElementById("da-te").innerHTML = `Date : ${ date.toDateString()} `  ;
-   const time = document.getElementById('time').textContent = `Time : ${date.toLocaleTimeString()}`
+   document.getElementById('time').textContent = `Time : ${date.toLocaleTimeString()}`
 
 }
 const time = document.getElementById('time');
 time.addEventListener('click',function(){
     clearInterval(set)
 })
+
+ 
+
+ 
