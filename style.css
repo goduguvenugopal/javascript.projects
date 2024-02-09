@@ -51,7 +51,7 @@
   border-radius: 20px;
   box-shadow: 0px 0px 4px rgb(107, 107, 107);
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
   overflow-x: auto;
   padding-bottom: 0px;
 }
@@ -75,6 +75,13 @@
   height: 100vh;
 }
 
+
+.second-div{
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+  width: 170px;
+}
 /* reverse name styling  */
 
 .textlabel1 {
@@ -431,62 +438,55 @@
   color: white;
 }
 
-
-
 /* try catch form styling */
- .catch{
+.catch {
   height: 35px;
   border-radius: 20px;
   user-select: none;
   border: none;
   outline: none;
-   padding-left: 15px;
+  padding-left: 15px;
   font-size: 17px;
- }
+}
 
 /* password styling */
 
-.main-card{
- display: flex;
- justify-content: center;
- padding-top: ;
+.main-card {
+  display: flex;
+  justify-content: center;
+  padding-top: ;
 }
 
-
-.toggle-card{
+.toggle-card {
   display: flex;
-  height: 35px;
+  height: 37px;
   background-color: white;
-  width: 250px;
-  justify-content: center;
+  width: 300px;
+  justify-content: space-around;
   border-radius: 20px;
   align-items: center;
   margin-left: 5px;
+  
 }
 
-#togglepass{
+#togglepass {
   height: 35px;
   border-radius: 20px;
   user-select: none;
   border: none;
   outline: none;
-   
+
   font-size: 17px;
-  
-  
 }
 
-
-.lockicon1{
-   
+.lockicon1 {
   right: 40px;
   font-size: 15px;
   top: 5px;
-   cursor: pointer;
-   user-select: none;
+  cursor: pointer;
+  user-select: none;
 }
-.lockicon2{
-   
+.lockicon2 {
   right: 40px;
   font-size: 15px;
   top: 5px;
@@ -494,12 +494,9 @@
   user-select: none;
 }
 
-#lockopen{
+#lockopen {
   display: none;
 }
-
- 
-
 
 /* share button styling  */
 #sharebt {

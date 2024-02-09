@@ -1,28 +1,64 @@
-// to do list code starts here
+// // to do list code starts here
+
 document.addEventListener("DOMContentLoaded", function () {
-  const textfunc = document.getElementById("text");
-  const addbtnfunc = document.getElementById("addtask");
-  const displayfunc = document.getElementById("displaytask");
+  const textInput = document.getElementById("text");
+  const addButton = document.getElementById("addtask");
+  const displayArea = document.getElementById("displaytask");
 
-  addbtnfunc.addEventListener("click", function () {
-    const txtFromT = textfunc.value.trim();
-    if (txtFromT !== "") {
-      const newList = document.createElement("li");
-      newList.className = "list-tag";
-      newList.innerHTML = `<span>${txtFromT}</span>
-      <button class="delbtn" onclick="delfunc(this)">Delete</button>`;
-
-      displayfunc.appendChild(newList);
-      textfunc.value = "";
+  addButton.addEventListener("click", function () {
+    const taskText = textInput.value.trim();
+    if (taskText !== "") {
+      const newTask = createTaskElement(taskText);
+      displayArea.appendChild(newTask);
+      textInput.value = "";
     }
   });
-});
-// delete function code
-function delfunc(button) {
-  const newLi = button.parentElement;
-  newLi.remove();
-}
 
+  function createTaskElement(taskText) {
+    const taskContainer = document.createElement("div");
+    taskContainer.classList.add("list-tag");
+
+    const taskSpan = document.createElement("span");
+
+    taskSpan.textContent = taskText;
+    taskContainer.appendChild(taskSpan);
+
+     const newDiv = document.createElement("div");
+     newDiv.classList.add("second-div");
+     taskContainer.appendChild(newDiv);
+
+
+    const editButton = document.createElement("button");
+    editButton.classList = "delbtn";
+    editButton.textContent = "Edit";
+    editButton.addEventListener("click", function () {
+      editTask(taskContainer);
+    });
+    newDiv.appendChild(editButton);
+
+    const deleteButton = document.createElement("button");
+    deleteButton.classList = "delbtn";
+    deleteButton.textContent = "Delete";
+    deleteButton.addEventListener("click", function () {
+      deleteTask(taskContainer);
+    });
+    newDiv.appendChild(deleteButton);
+
+    return taskContainer;
+  }
+
+  function deleteTask(taskElement) {
+    taskElement.remove();
+  }
+
+  function editTask(taskElement) {
+    const newText = prompt("Change Your Task :",` Hello change your task here `);
+    if (newText !== null) {
+      const taskSpan = taskElement.querySelector("span");
+      taskSpan.textContent = newText;
+    }
+  }
+});
 // reverse name code starts here
 
 function addTask() {
