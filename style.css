@@ -515,3 +515,8 @@
   background-color: rgb(53, 119, 199);
   color: white;
 }
+
+
+#time{
+  cursor: pointer;
+}

@@ -8,25 +8,23 @@ document.addEventListener("DOMContentLoaded", function () {
   addButton.addEventListener("click", function () {
     const taskText = textInput.value.trim();
     if (taskText !== "") {
-      const newTask = createTaskElement(taskText);
-      displayArea.appendChild(newTask);
       textInput.value = "";
+      createTaskElement(taskText);
     }
   });
 
   function createTaskElement(taskText) {
     const taskContainer = document.createElement("div");
     taskContainer.classList.add("list-tag");
+    displayArea.appendChild(taskContainer);
 
     const taskSpan = document.createElement("span");
-
     taskSpan.textContent = taskText;
     taskContainer.appendChild(taskSpan);
 
-     const newDiv = document.createElement("div");
-     newDiv.classList.add("second-div");
-     taskContainer.appendChild(newDiv);
-
+    const newDiv = document.createElement("div");
+    newDiv.classList.add("second-div");
+    taskContainer.appendChild(newDiv);
 
     const editButton = document.createElement("button");
     editButton.classList = "delbtn";
@@ -43,8 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
       deleteTask(taskContainer);
     });
     newDiv.appendChild(deleteButton);
-
-    return taskContainer;
   }
 
   function deleteTask(taskElement) {
@@ -52,7 +48,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function editTask(taskElement) {
-    const newText = prompt("Change Your Task :",` Hello change your task here `);
+    const newText = prompt(
+      "Change Your Task :",
+      ` Hello change your task here `
+    );
     if (newText !== null) {
       const taskSpan = taskElement.querySelector("span");
       taskSpan.textContent = newText;
@@ -262,3 +261,18 @@ function toggleFunc() {
     toggleOpen.style.display = "none";
   }
 }
+
+
+//  time function 
+const set = setInterval(setDate, 1000);
+
+function setDate() {
+  let date = new Date();
+  document.getElementById("da-te").innerHTML = `Date : ${ date.toDateString()} `  ;
+   const time = document.getElementById('time').textContent = `Time : ${date.toLocaleTimeString()}`
+
+}
+const time = document.getElementById('time');
+time.addEventListener('click',function(){
+    clearInterval(set)
+})
