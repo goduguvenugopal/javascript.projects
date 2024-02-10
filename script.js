@@ -204,7 +204,7 @@ textColor.addEventListener("change", function () {
   outputDiv.style.color = textCol;
 });
 
-// share websit Code
+// shareAPI websit Code
 
 function shareFunc() {
   navigator.share({
@@ -262,21 +262,32 @@ function toggleFunc() {
   }
 }
 
-
-//  time function 
+//  time function
 const set = setInterval(setDate, 1000);
 
 function setDate() {
   let date = new Date();
-  document.getElementById("da-te").innerHTML = `Date : ${ date.toDateString()} `  ;
-   document.getElementById('time').textContent = `Time : ${date.toLocaleTimeString()}`
-
+  document.getElementById("da-te").innerHTML = `Date : ${date.toDateString()} `;
+  document.getElementById(
+    "time"
+  ).textContent = `Time : ${date.toLocaleTimeString()}`;
 }
-const time = document.getElementById('time');
-time.addEventListener('click',function(){
-    clearInterval(set)
-})
+const time = document.getElementById("time");
+time.addEventListener("click", function () {
+  clearInterval(set);
+});
 
- 
+// palindrome script code starts here
 
- 
+const palinText = document.getElementById("palinid");
+const palinBtn = document.getElementById("palinbtn");
+const palinOutput = document.getElementById("palinout");
+
+palinBtn.addEventListener("click", function () {
+  const pal = palinText.value.toLowerCase();
+  const revFunc = pal.split("").reverse().join("");
+
+  const outPalFunc =
+    revFunc === pal ? "Yes, it is palindrome" : "this is not palindrome";
+  palinOutput.textContent = outPalFunc;
+});
